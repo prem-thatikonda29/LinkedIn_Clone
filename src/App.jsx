@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 import Header from "./Components/Header/Header";
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -9,7 +10,10 @@ function App() {
   return (
     <>
       <Header />
-      {/* <h1>Building the LinkedIn clone</h1> */}
+
+      <div className="app__body">
+        <Sidebar />
+      </div>
     </>
   );
 }
