@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-evenly;
   border-bottom: 0.2px solid black;
-  padding: 10px 0;
+  padding: 5px 0;
   width: 100%;
   top: 0;
   position: sticky;
@@ -22,7 +22,7 @@
 .header__left > svg {
   object-fit: contain;
   margin-right: 10px;
-  height: 40px;
+  height: 35px;
 }
 
 .header__search {

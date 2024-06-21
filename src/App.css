@@ -6,7 +6,8 @@
 
 .app__body {
   display: flex;
-  align-items: center;
-  /* justify-content: center; */
+  /* align-items: center; */
+  /* justify-content: baseline; */
   background-color: #f3f2ef;
+  margin: 0 180px;
 }
