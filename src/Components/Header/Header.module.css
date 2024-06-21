@@ -1,5 +1,35 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.header {
+  display: flex;
+}
+
+.header__left {
+  display: flex;
+}
+
+.header__left > svg {
+  object-fit: contain;
+  margin-right: 10px;
+  height: 40px;
+}
+
+.header__search {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  height: 22px;
+  color: grey;
+  background-color: #eef3f8;
+}
+
+.header__search > input {
+  outline: none;
+  border: none;
+  background-color: none;
 }
