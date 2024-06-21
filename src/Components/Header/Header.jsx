@@ -1,30 +1,32 @@
 import React from "react";
 import styles from "./Header.module.css";
-
-// import { Link } from "react-router-dom";
+import HeaderOptions from "./HeaderOptions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faSearch,
+  faPeopleArrows,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__left}>
-        {/* LinkedIn SVG */}
         <svg
           width="50px"
           height="50px"
           viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
+          aria-labelledby="linkedin-icon-title"
         >
+          <title id="linkedin-icon-title">LinkedIn Icon</title>
           <g id="SVGRepo_bgCarrier" strokeWidth="0" />
-
           <g
             id="SVGRepo_tracerCarrier"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-
           <g id="SVGRepo_iconCarrier">
             <path
               fill="#0A66C2"
@@ -37,8 +39,11 @@ function Header() {
           <input type="text" placeholder="Search" />
         </div>
       </div>
-      
-      <div className={styles.header__right}></div>
+
+      <div className={styles.header__right}>
+        <HeaderOptions Icon={faHome} title="Home" />
+        <HeaderOptions Icon={faPeopleArrows} title="My Network" />
+      </div>
     </header>
   );
 }
