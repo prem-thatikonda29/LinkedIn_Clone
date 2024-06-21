@@ -3,10 +3,14 @@ import styles from "./Header.module.css";
 import HeaderOptions from "./HeaderOptions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBell,
+  faBriefcase,
   faHome,
+  faMessage,
   faSearch,
-  faPeopleArrows,
+  faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import Avatar from "../../assets/avatar.png";
 
 function Header() {
   return (
@@ -42,7 +46,11 @@ function Header() {
 
       <div className={styles.header__right}>
         <HeaderOptions Icon={faHome} title="Home" />
-        <HeaderOptions Icon={faPeopleArrows} title="My Network" />
+        <HeaderOptions Icon={faUserGroup} title="My Network" />
+        <HeaderOptions Icon={faBriefcase} title="Jobs" />
+        <HeaderOptions Icon={faMessage} title="Messaging" />
+        <HeaderOptions Icon={faBell} title="Notifications" />
+        <HeaderOptions avatar={Avatar} title="Me" />
       </div>
     </header>
   );
