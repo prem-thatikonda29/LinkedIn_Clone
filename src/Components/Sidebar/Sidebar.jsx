@@ -5,11 +5,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPerson } from "@fortawesome/free-solid-svg-icons";
 
 function Sidebar() {
+  const recentItem = (topic) => {
+    return (
+      <div className={styles.sidebar__recentItem}>
+        <span className={styles.sidebar__hash}>#</span>
+        <p>{topic}</p>
+      </div>
+    );
+  };
+
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebar__top}>
-        <img src="" alt="" />
-        <FontAwesomeIcon icon={faPerson} className={styles.sidebar__avatar} />
+        <img
+          src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=3074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="profile bg"
+        />
+        <FontAwesomeIcon
+          icon={faPerson}
+          className={styles.sidebar__avatar}
+          size="lg"
+        />
         <h2>Prem Thatikonda</h2>
         <h4>thatikondprem072@gmail.com</h4>
       </div>
@@ -27,6 +43,9 @@ function Sidebar() {
 
       <div className={styles.sidebar__bottom}>
         <p>Recent</p>
+        {recentItem("reactjs")}
+        {recentItem("business")}
+        {recentItem("design")}
       </div>
     </div>
   );

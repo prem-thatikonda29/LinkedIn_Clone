@@ -8,13 +8,13 @@ function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <>
+    <section>
       <Header />
 
       <div className="app__body">
         <Sidebar />
       </div>
-    </>
+    </section>
   );
 }
 
