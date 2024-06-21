@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg",
+      "name": "Prem",
+      "description": "B.Tech Student",
+      "message": "I am thrilled to announce..."
+    },
+
+    {
+      "avatar": "https://i.pinimg.com/564x/0e/ec/ea/0eecea46987c10435e974d7b778925c7.jpg",
+      "name": "Aayush",
+      "description": "Businessman",
+      "message": "I am verye xcited to..."
+    }
+  ]
+}

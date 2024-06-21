@@ -15,6 +15,9 @@ import Post from "./Post";
 function Feed() {
   const [posts, setPosts] = useState(null);
 
+  const sendPost = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className={styles.feed}>
@@ -23,7 +26,9 @@ function Feed() {
           <FontAwesomeIcon icon={faPenToSquare} />
           <form action="">
             <input type="text" placeholder="Try writing with AI" />
-            <button type="submit">Send</button>
+            <button type="submit" onClick={sendPost}>
+              Send
+            </button>
           </form>
         </div>
 
@@ -40,11 +45,9 @@ function Feed() {
 
       {/* POSTS */}
 
-      {posts.map((post)=>{
-        return(
-            
-        )
-      })}
+      {/* {posts.map((post) => {
+        return <Post />;
+      })} */}
       <Post
         name="Prem Thatikonda"
         description="B.Tech Student"
