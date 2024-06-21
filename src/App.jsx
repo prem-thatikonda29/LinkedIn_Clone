@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <h1>Building the LinkedIn clone</h1>
+      {/* <h1>Building the LinkedIn clone</h1> */}
     </>
   );
 }
