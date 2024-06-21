@@ -13,8 +13,8 @@
 
 .header_option_icon {
   object-fit: contain;
-  height: 25px !important;
-  width: 25px !important;
+  height: 20px !important;
+  width: 20 px !important;
 }
 
 .header_option_title {

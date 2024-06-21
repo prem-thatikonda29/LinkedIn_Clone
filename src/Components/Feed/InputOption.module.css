@@ -1,6 +1,16 @@
-.inputOption{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.inputOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
 }
 
+.inputOption:hover {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.inputOption > h4{
+    margin-left: 2px;
+}
