@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Feed.module.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPenToSquare,
@@ -8,15 +7,61 @@ import {
   faCalendar,
   faNewspaper,
 } from "@fortawesome/free-solid-svg-icons";
-
 import InputOption from "./InputOption";
 import Post from "./Post";
 
 function Feed() {
-  const [posts, setPosts] = useState(null);
+  const [input, setInput] = useState("");
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3500/posts")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok " + response.statusText);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setPosts(data);
+        console.log(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
 
   const sendPost = (e) => {
     e.preventDefault();
+
+    const postData = {
+      name: "Prem Thatikonda",
+      description: "B.Tech Student",
+      message: input,
+      avatar:
+        "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg",
+    };
+
+    fetch("http://localhost:3500/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok " + response.statusText);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setPosts((prevPosts) => [data, ...prevPosts]);
+        setInput("");
+      })
+      .catch((error) => console.log("Error:", error));
+
+    console.log(posts);
   };
 
   return (
@@ -25,7 +70,12 @@ function Feed() {
         <div className={styles.feed__input}>
           <FontAwesomeIcon icon={faPenToSquare} />
           <form action="">
-            <input type="text" placeholder="Try writing with AI" />
+            <input
+              type="text"
+              placeholder="Try writing with AI"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />
             <button type="submit" onClick={sendPost}>
               Send
             </button>
@@ -45,15 +95,15 @@ function Feed() {
 
       {/* POSTS */}
 
-      {/* {posts.map((post) => {
-        return <Post />;
-      })} */}
-      <Post
-        name="Prem Thatikonda"
-        description="B.Tech Student"
-        message="I am thriled to anounce.."
-        photoURL="https://i.pinimg.com/564x/7e/31/39/7e3139628dcf14f1cc53ac5b192877eb.jpg"
-      />
+      {posts.map((post, index) => (
+        <Post
+          key={index}
+          name={post.name}
+          description={post.description}
+          message={post.message}
+          photoURL={post.avatar}
+        />
+      ))}
     </div>
   );
 }

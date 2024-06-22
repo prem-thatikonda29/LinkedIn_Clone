@@ -1,17 +1,55 @@
 {
   "posts": [
     {
-      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg",
-      "name": "Prem",
+      "id": "4d12",
+      "name": "Prem Thatikonda",
       "description": "B.Tech Student",
-      "message": "I am thrilled to announce..."
+      "message": "this is a test",
+      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg"
     },
-
     {
-      "avatar": "https://i.pinimg.com/564x/0e/ec/ea/0eecea46987c10435e974d7b778925c7.jpg",
-      "name": "Aayush",
-      "description": "Businessman",
-      "message": "I am verye xcited to..."
+      "id": "4058",
+      "name": "Prem Thatikonda",
+      "description": "B.Tech Student",
+      "message": "Another one",
+      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg"
+    },
+    {
+      "id": "ad92",
+      "name": "Prem Thatikonda",
+      "description": "B.Tech Student",
+      "message": "Hala madrid",
+      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg"
+    },
+    {
+      "id": "6d48",
+      "name": "Prem Thatikonda",
+      "description": "B.Tech Student",
+      "message": "testing 2",
+      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg"
+    },
+    {
+      "id": "24f7",
+      "name": "Prem Thatikonda",
+      "description": "B.Tech Student",
+      "message": "testing 3",
+      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Prem Thatikonda",
+      "email": "prem@gmail.com",
+      "password": "password123",
+      "image": "https://i.pinimg.com/564x/54/83/c0/5483c0b7f5ed4dd3495c8a19f4085a37.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "jane@gmail.com",
+      "password": "password456",
+      "image": "https://i.pinimg.com/564x/0f/5d/e3/0f5de3a216ef77de243a8bb7f053ac6b.jpg"
     }
   ]
 }
