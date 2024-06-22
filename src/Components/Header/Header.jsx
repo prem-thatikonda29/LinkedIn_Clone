@@ -10,9 +10,13 @@ import {
   faSearch,
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
-import Avatar from "../../assets/avatar.png";
+// import Avatar from "../../assets/avatar.png";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/userSlice";
 
 function Header() {
+  const user = useSelector(selectUser);
+
   return (
     <header className={styles.header}>
       <div className={styles.header__left}>
@@ -50,7 +54,7 @@ function Header() {
         <HeaderOptions Icon={faBriefcase} title="Jobs" />
         <HeaderOptions Icon={faMessage} title="Messaging" />
         <HeaderOptions Icon={faBell} title="Notifications" />
-        <HeaderOptions avatar={Avatar} title="Me" />
+        <HeaderOptions avatar={false} title="Me" />
       </div>
     </header>
   );

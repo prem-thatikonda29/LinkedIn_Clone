@@ -9,8 +9,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import InputOption from "./InputOption";
 import Post from "./Post";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/userSlice";
+import FlipMove from "react-flip-move";
 
 function Feed() {
+  const user = useSelector(selectUser);
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
@@ -23,8 +27,10 @@ function Feed() {
         return response.json();
       })
       .then((data) => {
-        setPosts(data);
+        let reversedPosts = [...data];
+        setPosts(reversedPosts.reverse());
         console.log(data);
+        console.log("User : ", user);
       })
       .catch((e) => {
         console.log(e);
@@ -35,11 +41,10 @@ function Feed() {
     e.preventDefault();
 
     const postData = {
-      name: "Prem Thatikonda",
-      description: "B.Tech Student",
+      name: user.name,
+      description: user.email,
       message: input,
-      avatar:
-        "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg",
+      avatar: user.image,
     };
 
     fetch("http://localhost:3500/posts", {
@@ -94,16 +99,17 @@ function Feed() {
       </div>
 
       {/* POSTS */}
-
-      {posts.map((post, index) => (
-        <Post
-          key={index}
-          name={post.name}
-          description={post.description}
-          message={post.message}
-          photoURL={post.avatar}
-        />
-      ))}
+      <FlipMove>
+        {posts.map((post) => (
+          <Post
+            key={post.id}
+            name={post.name}
+            description={post.description}
+            message={post.message}
+            photoURL={post.avatar}
+          />
+        ))}
+      </FlipMove>
     </div>
   );
 }

@@ -9,9 +9,9 @@ import { selectUser } from "../../features/userSlice";
 function Sidebar() {
   const user = useSelector(selectUser);
 
-  useEffect(() => {
-    console.log(user);
-  }, []);
+  // useEffect(() => {
+  //   console.log(user);
+  // }, []);
 
   const recentItem = (topic) => {
     return (

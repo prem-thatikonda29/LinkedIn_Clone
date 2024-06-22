@@ -5,6 +5,7 @@ import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Feed from "./Components/Feed/Feed";
 import Login from "./pages/Login";
+import Widgets from "./Components/Widgets/Widgets";
 import { selectUser, login } from "./features/userSlice";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <div className="app__body">
           <Sidebar />
           <Feed />
+          <Widgets />
         </div>
       )}
     </section>

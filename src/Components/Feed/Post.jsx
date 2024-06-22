@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styles from "./Post.module.css";
 
 import InputOption from "./InputOption";
@@ -10,9 +10,9 @@ import {
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Post({ name, description, photoURL, message }) {
+const Post = forwardRef(({ name, description, photoURL, message }, ref) => {
   return (
-    <div className={styles.post}>
+    <div ref={ref} className={styles.post}>
       <div className={styles.post__header}>
         <img src={photoURL} alt="" className={styles.avatar} />
         <div className={styles.post__info}>
@@ -33,6 +33,6 @@ function Post({ name, description, photoURL, message }) {
       </div>
     </div>
   );
-}
+});
 
 export default Post;

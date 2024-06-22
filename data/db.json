@@ -1,39 +1,32 @@
 {
   "posts": [
     {
-      "id": "4d12",
-      "name": "Prem Thatikonda",
-      "description": "B.Tech Student",
-      "message": "this is a test",
-      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg"
+      "id": "d0e2",
+      "name": "Ryan Thatikonda",
+      "description": "ryan@gmail.com",
+      "message": "Test 1",
+      "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
     },
     {
-      "id": "4058",
-      "name": "Prem Thatikonda",
-      "description": "B.Tech Student",
-      "message": "Another one",
-      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg"
+      "id": "e3a3",
+      "name": "Ryan Thatikonda",
+      "description": "ryan@gmail.com",
+      "message": "Test 2",
+      "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
     },
     {
-      "id": "ad92",
-      "name": "Prem Thatikonda",
-      "description": "B.Tech Student",
-      "message": "Hala madrid",
-      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg"
+      "id": "48d5",
+      "name": "Ryan Thatikonda",
+      "description": "ryan@gmail.com",
+      "message": "Test 3",
+      "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
     },
     {
-      "id": "6d48",
-      "name": "Prem Thatikonda",
-      "description": "B.Tech Student",
-      "message": "testing 2",
-      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg"
-    },
-    {
-      "id": "24f7",
-      "name": "Prem Thatikonda",
-      "description": "B.Tech Student",
-      "message": "testing 3",
-      "avatar": "https://i.pinimg.com/564x/97/bb/06/97bb067e30ff6b89f4fbb7b9141025ca.jpg"
+      "id": "6b74",
+      "name": "Ryan Thatikonda",
+      "description": "ryan@gmail.com",
+      "message": "test 4",
+      "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
     }
   ],
   "users": [
@@ -50,6 +43,13 @@
       "email": "jane@gmail.com",
       "password": "password456",
       "image": "https://i.pinimg.com/564x/0f/5d/e3/0f5de3a216ef77de243a8bb7f053ac6b.jpg"
+    },
+    {
+      "id": "f76d",
+      "name": "Ryan Thatikonda",
+      "email": "ryan@gmail.com",
+      "password": "ryan1234",
+      "image": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
     }
   ]
 }
