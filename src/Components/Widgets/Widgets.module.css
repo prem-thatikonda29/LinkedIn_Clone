@@ -6,5 +6,41 @@
   border-radius: 10px;
   border: 1px solid lightgray;
   height: fit-content;
-  padding-bottom: 10px;
+  padding: 10px;
+}
+
+.widgets__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.widgets__header > h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.widgets__article {
+  display: flex;
+  align-items:center;
+  gap: 15px;
+  padding-left: 8px;
+}
+
+.widget__article__left {
+  color: #0a66c2;
+  margin-top: -18px;
+}
+
+.widgets__article:hover {
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.widget__article__right{
+    flex: 1 ;
+}
+
+.widget__article__right > h4 {
+  margin-bottom: -10px;
 }
