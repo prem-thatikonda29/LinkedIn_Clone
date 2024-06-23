@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f4f2ee;
+}
+main {
+  margin-top: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* Header */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+header .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo img {
+  width: 34px;
+}
+header .container nav {
+  display: flex;
+  gap: 20px;
+}
+header .container nav a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.grow {
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 10px;
+  column-gap: 30px;
+}
+.grow a:hover {
+  text-decoration: underline;
+  text-decoration-color: #003c0a;
+}
+
+/* Invitations */
+.requests {
+  margin-top: 10px;
+  height: 360px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 15px;
+}
+.requests h4 {
+  margin-bottom: 10px;
+}
+.reqProf {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.profilePic img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin-top: 10px;
+}
+.profileName {
+  display: flex;
+  /* column-gap: 290px; */
+  align-items: flex-end;
+  column-gap: 290px;
+}
+.profileName div {
+  width: 220px;
+}
+.negButton {
+  background-color: transparent;
+  padding: 12px;
+  margin-right: 20px;
+  font-size: large;
+  border-radius: 25px;
+  width: 100px;
+  color: rgb(0, 0, 0);
+  border: 0;
+}
+.negButton:hover {
+  background-color: rgb(195, 195, 195);
+}
+.posButton {
+  background-color: #ffffff;
+  padding: 12px;
+  font-size: medium;
+  border-radius: 25px;
+  font-size: large;
+  width: 100px;
+  border: 1px solid #0a66c2;
+  color: #0a66c2;
+}
+.posButton:hover {
+  background-color: lightblue;
+  font-weight: 800;
+  border: 2.5px solid #0a66c2;
+}
+/* Invitations */
+
+/* People */
+.people {
+  height: 660px;
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 15px;
+}
+.people h4 {
+  margin-bottom: 10px;
+}
+
+.connect {
+  display: grid;
+  /* background-color: gray; */
+  grid-template-columns: 213px 213px 213px 213px;
+  grid-template-rows: 300px 300px;
+  margin-top: 5px;
+}
+.connect .peoplecard {
+  background-color: transparent;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.peoplecard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.peoplecard .banner {
+  width: 100%;
+  height: 80px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.profpic {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-top: -50px;
+}
+
+.peopleinfo {
+  text-align: center;
+  padding: 10px;
+}
+.connectbtn {
+  width: 100%;
+  height: 30px;
+  margin-top: 25px;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 20px;
+  border: 2px solid #0a66c2;
+  color: #0a66c2;
+  cursor: pointer;
+}
+.connectbtn:hover {
+  background-color: lightblue;
+}
+
+/* People */
+
+.events {
+  height: 720px;
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.listEvents {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: 283px 283px 283px;
+  grid-template-rows: 330px 330px;
+}
+
+.listEvents .eventcard {
+  background-color: transparent;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.eventcard {
+  display: flex;
+  flex-direction: column;
+}
+.eventcard .banner {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.eventdetails {
+  padding: 15px;
+  border: 0px solid;
+}
+.viewbtn {
+  width: 100%;
+  height: 30px;
+  margin-top: 15px;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 20px;
+  border: 2px solid #0a66c2;
+  color: #0a66c2;
+  cursor: pointer;
+}
+.viewbtn:hover {
+  background-color: lightblue;
+}

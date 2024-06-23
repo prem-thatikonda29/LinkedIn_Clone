@@ -43,6 +43,14 @@ function Login() {
       email,
       password,
       image,
+      bannerImage: "",
+      education: [],
+      experience: [],
+      about: "",
+      headline: "",
+      city: "",
+      state: "",
+      country: "",
     };
 
     fetch("http://localhost:3500/users", {
@@ -91,7 +99,9 @@ function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={handleLogin} type="submit">Sign in</button>
+        <button onClick={handleLogin} type="submit">
+          Sign in
+        </button>
         <p>
           New user?
           <span className="login__register" onClick={handleRegister}>

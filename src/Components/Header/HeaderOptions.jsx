@@ -18,21 +18,21 @@ function HeaderOptions({ avatar, Icon, title }) {
     navigate("/login");
   };
 
+  const getLink = () => {
+    switch (title) {
+      case "Me":
+        return "/profile";
+      case "My Network":
+        return "/network";
+      default:
+        return "#"; // Default link if no matching case
+    }
+  };
+
   return (
     <div className={styles.header_option_wrapper}>
-      {title === "Me" ? (
-        <Link to="/profile" className={styles.header_option}>
-          <div>
-            {/* <img src={user.image} className={styles.header_option_icon} alt="" /> */}
-            {avatar && user?.email[0]}
-            <h3 className={styles.header_option_title}>{title}</h3>
-          </div>
-        </Link>
-      ) : (
-        <div
-          className={styles.header_option}
-          onClick={title === "Notifications" ? handleLogout : null}
-        >
+      {title === "Notifications" ? (
+        <div className={styles.header_option} onClick={handleLogout}>
           {Icon && (
             <FontAwesomeIcon
               icon={Icon}
@@ -42,6 +42,17 @@ function HeaderOptions({ avatar, Icon, title }) {
           {avatar && user?.email[0]}
           <h3 className={styles.header_option_title}>{title}</h3>
         </div>
+      ) : (
+        <Link to={getLink()} className={styles.header_option}>
+          {Icon && (
+            <FontAwesomeIcon
+              icon={Icon}
+              className={styles.header_option_icon}
+            />
+          )}
+          {avatar && user?.email[0]}
+          <h3 className={styles.header_option_title}>{title}</h3>
+        </Link>
       )}
     </div>
   );

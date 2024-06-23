@@ -9,8 +9,9 @@ import AdditionalInfoForm from "./pages/AdditionalInfoForm/AdditionalInfoForm";
 import Widgets from "./Components/Widgets/Widgets";
 import ProfilePage from "./pages/Profile/Profile";
 import ProfileForm from "./pages/Profile/ProfileForm";
+import Network from "./pages/Network/Network";
 import { selectUser, login } from "./features/userSlice";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   const user = useSelector(selectUser);
@@ -25,24 +26,51 @@ function App() {
     }
   }, [dispatch]);
 
+  const IsAuth = ({ children }) => {
+    return !user ? <Navigate to="/login" /> : children;
+  };
+
   return (
     <BrowserRouter>
       <div>
         <Header />
         <Routes>
-          {!user ? (
-            <>
-              <Route path="/" element={<Login />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/additional_info" element={<AdditionalInfoForm />} />
-            </>
-          ) : (
-            <>
-              <Route path="/home" element={<Home />} />
-              <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/update/:id" element={<ProfileForm />} />
-            </>
-          )}
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/additional-info" element={<AdditionalInfoForm />} />
+
+          <Route
+            path="/home"
+            element={
+              <IsAuth>
+                <Home />
+              </IsAuth>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <IsAuth>
+                <ProfilePage />
+              </IsAuth>
+            }
+          />
+          <Route
+            path="/update/:id"
+            element={
+              <IsAuth>
+                <ProfileForm />
+              </IsAuth>
+            }
+          />
+          <Route
+            path="/network"
+            element={
+              <IsAuth>
+                <Network />
+              </IsAuth>
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>

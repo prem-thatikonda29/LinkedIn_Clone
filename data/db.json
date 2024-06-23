@@ -66,13 +66,6 @@
   ],
   "users": [
     {
-      "id": 2,
-      "name": "Jane Doe",
-      "email": "jane@gmail.com",
-      "password": "password456",
-      "image": "https://i.pinimg.com/564x/0f/5d/e3/0f5de3a216ef77de243a8bb7f053ac6b.jpg"
-    },
-    {
       "id": "f76d",
       "name": "Ryan Thatikonda",
       "email": "ryan@gmail.com",
@@ -123,6 +116,11 @@
           "degree": "HSC",
           "orgName": "St. Xavier's College, Mumbai",
           "duration": "2 years"
+        },
+        {
+          "degree": "MBA",
+          "orgName": "ITM Skills University",
+          "duration": "2"
         }
       ],
       "experience": [
@@ -329,6 +327,32 @@
           "duration": "4 years"
         }
       ]
+    },
+    {
+      "id": "05e4",
+      "name": "Jithendra",
+      "email": "jith@gmail.com",
+      "password": "pass1234",
+      "image": "https://media.licdn.com/dms/image/D4D03AQF9jhR1M342Iw/profile-displayphoto-shrink_400_400/0/1704995590531?e=1724889600&v=beta&t=D_3D2V7aWU6Y7f7pG28IGsBA4w-k2JiFYKENIb31H5A",
+      "bannerImage": "https://media.licdn.com/dms/image/D4D16AQGxSe0G2YbnEQ/profile-displaybackgroundimage-shrink_350_1400/0/1703688359225?e=1724889600&v=beta&t=Al6K3MQupQNC2tNLwnBuaNxXvW-wlnNfM3su7bE9egQ",
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University",
+          "duration": "4 years"
+        },
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University",
+          "duration": "4 years"
+        }
+      ],
+      "experience": [],
+      "about": "Greetings! I'm a dedicated and enthusiastic full-stack developer with a keen interest in part-time opportunities that allow me to contribute my skills to innovative projects. My proficiency spans a wide range of technologies, including HTML, CSS, JavaScript, React, Node.js, Express, Next.js and various server-side technologies.",
+      "headline": "Full Stack development || React || Node || Express || JS || Sass || Tailwind || Enthusiastic CS Student @ ITM Skills University",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India"
     }
   ]
 }

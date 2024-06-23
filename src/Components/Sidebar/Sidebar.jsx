@@ -22,17 +22,17 @@ function Sidebar() {
     <div className={styles.sidebar}>
       <div className={styles.sidebar__top}>
         <img
-          src={user.bannerImage}
+          src={user?.bannerImage}
           alt="profile bg"
           className={styles.bgImage}
         />
         <img
-          src={user.image}
+          src={user?.image}
           alt="Profile pic"
           className={styles.sidebar__avatar}
         />
-        <h2>{user.name}</h2>
-        <h4>{user.headline.slice(0, 25) + "..."}</h4>
+        <h2>{user?.name}</h2>
+        <h4>{user?.headline?.slice(0, 25) + "..."}</h4>
       </div>
 
       <div className={styles.sidebar__stats}>

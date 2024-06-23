@@ -53,7 +53,7 @@ function Header() {
 
       <div className={styles.header__right}>
         <HeaderOptions Icon={faHome} title="Home" />
-        <HeaderOptions Icon={faUserGroup} title="My Network" />
+        <HeaderOptions Icon={faUserGroup} title="My Network" link="/network" />
         <HeaderOptions Icon={faBriefcase} title="Jobs" />
         <HeaderOptions Icon={faMessage} title="Messaging" />
         <HeaderOptions Icon={faBell} title="Notifications" />
