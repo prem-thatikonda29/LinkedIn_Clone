@@ -56,7 +56,7 @@ function Login() {
       .then((data) => {
         dispatch(login(data));
         localStorage.setItem("user", JSON.stringify(data));
-        navigate("/additional-info"); // Navigate to additional info page after successful registration
+        navigate("/home");
       })
       .catch((error) => {
         console.error("Error registering user:", error);

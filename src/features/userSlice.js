@@ -1,9 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export const userSlice = createSlice({
-  name: 'user',
+  name: "user",
   initialState: {
-    users: [], 
+    users: [],
     user: null, // Include a user object in the initial state
   },
   reducers: {
@@ -21,7 +21,7 @@ export const userSlice = createSlice({
         password: action.payload.password,
         image: action.payload.image,
         headline: action.payload.headline,
-        education: action.payload.education,
+        education: action.payload.education || [],
         city: action.payload.city,
         state: action.payload.state,
         country: action.payload.country,
@@ -29,10 +29,12 @@ export const userSlice = createSlice({
         about: action.payload.about,
       };
       state.users.push(newUser);
-      state.user = newUser; 
+      state.user = newUser;
     },
     updateUser: (state, action) => {
-      const index = state.users.findIndex(user => user.id === action.payload.id);
+      const index = state.users.findIndex(
+        (user) => user.id === action.payload.id
+      );
       if (index !== -1) {
         state.users[index] = action.payload;
       }

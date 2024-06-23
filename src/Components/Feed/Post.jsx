@@ -17,7 +17,7 @@ const Post = forwardRef(({ name, description, photoURL, message }, ref) => {
         <img src={photoURL} alt="" className={styles.avatar} />
         <div className={styles.post__info}>
           <h2>{name}</h2>
-          <p>{description}</p>
+          <p>{description.length > 90 ? description.slice(0,90) + "..." : description}</p>
         </div>
       </div>
 

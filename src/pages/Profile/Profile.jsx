@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux"; // Import useDispatch
+import { useSelector, useDispatch } from "react-redux";
 import { selectUser, updateUser } from "../../features/userSlice";
 import "./Profile.css";
 
 function ProfilePage() {
-  const dispatch = useDispatch(); // Initialize useDispatch hook
+  const dispatch = useDispatch();
   const user = useSelector(selectUser);
   const [info, setInfo] = useState({});
+  const [experience, setExperience] = useState([]);
   const [education, setEducation] = useState([]);
 
   useEffect(() => {
@@ -17,6 +18,7 @@ function ProfilePage() {
         .then((data) => {
           setInfo(data);
           setEducation(data.education || []);
+          setExperience(data.experience || []);
         })
         .catch((err) => {
           console.error("Error fetching user data:", err);
@@ -25,33 +27,37 @@ function ProfilePage() {
   }, [user]);
 
   const handleDeleteEducation = (index) => {
-    // Create a copy of the education array
     const updatedEducation = [...education];
-    // Remove the education entry at the specified index
     updatedEducation.splice(index, 1);
-    // Update the local state
     setEducation(updatedEducation);
-    // Update the user object
     const updatedUser = {
       ...info,
       education: updatedEducation,
     };
     setInfo(updatedUser);
-    // Update the user data in the Redux store
     updateUserInRedux(updatedUser);
-    // Update the user data in the database
+    updateUserInDatabase(updatedUser);
+  };
+
+  const handleDeleteExp = (index) => {
+    const updatedExp = [...experience];
+    updatedExp.splice(index, 1);
+    setExperience(updatedExp);
+    const updatedUser = {
+      ...info,
+      experience: updatedExp,
+    };
+    setInfo(updatedUser);
+    updateUserInRedux(updatedUser);
     updateUserInDatabase(updatedUser);
   };
 
   const updateUserInRedux = (updatedUser) => {
-    // Dispatch an action to update the user in Redux store
-    dispatch(updateUser(updatedUser)); // Use dispatch function here
-    // Update the user data in localStorage (if needed)
+    dispatch(updateUser(updatedUser));
     localStorage.setItem("user", JSON.stringify(updatedUser));
   };
 
   const updateUserInDatabase = (updatedUser) => {
-    // Update the user data in the database
     const usersUrl = `http://localhost:3500/users/${user.id}`;
     fetch(usersUrl, {
       method: "PUT",
@@ -111,6 +117,29 @@ function ProfilePage() {
           <section className="experience" id="experience">
             <h2>Experience</h2>
             {/* Experience items */}
+            {experience.map((exp, index) => (
+              <div className="edu-item" key={index}>
+                <div className="edu-img">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/GGSIU_logo.svg/1200px-GGSIU_logo.svg.png"
+                    alt="GGSIPU"
+                  />
+                </div>
+                <div className="edu-details">
+                  <h4 className="edu-name">{exp.expTitle}</h4>
+                  <div className="edu-org-name">{exp.expOrgName}</div>
+                  <div className="edu-duration">{exp.expDuration}</div>
+                  <div className="edu-about">{exp.about}</div>
+                  <button
+                    type="button"
+                    className="delete-btn"
+                    onClick={() => handleDeleteExp(index)}
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            ))}
           </section>
 
           <section className="education" id="education">

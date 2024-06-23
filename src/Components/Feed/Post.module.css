@@ -2,7 +2,7 @@
   background-color: white;
   padding: 15px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .post__header {
@@ -27,6 +27,7 @@
 
 .post__body {
   overflow-wrap: anywhere;
+  margin-bottom: 10px;
 }
 
 .post__info > h2 {

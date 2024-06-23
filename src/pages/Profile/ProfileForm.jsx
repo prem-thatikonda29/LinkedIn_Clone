@@ -13,6 +13,7 @@ function ProfileForm() {
     email: "",
     image: "",
     headline: "",
+    experience: [],
     education: [],
     city: "",
     country: "",
@@ -24,6 +25,13 @@ function ProfileForm() {
     degree: "",
     orgName: "",
     duration: "",
+  });
+
+  const [experienceEntry, setExperienceEntry] = useState({
+    expTitle: "",
+    expOrgName: "",
+    expDuration: "",
+    expAbout: "",
   });
 
   useEffect(() => {
@@ -42,6 +50,11 @@ function ProfileForm() {
     setEducationEntry({ ...educationEntry, [name]: value });
   };
 
+  const handleExperienceInput = (event) => {
+    const { name, value } = event.target;
+    setExperienceEntry({ ...experienceEntry, [name]: value });
+  };
+
   const addEducationEntry = () => {
     const newEducationEntry = {
       degree: educationEntry.degree,
@@ -57,6 +70,27 @@ function ProfileForm() {
       degree: "",
       orgName: "",
       duration: "",
+    });
+    console.log(user);
+  };
+
+  const addExperienceEntry = () => {
+    const newExperienceEntry = {
+      expTitle: experienceEntry.expTitle,
+      expOrgName: experienceEntry.expOrgName,
+      expDuration: experienceEntry.expDuration,
+      expAbout: experienceEntry.expAbout,
+    };
+
+    setUser((prevState) => ({
+      ...prevState,
+      experience: [...prevState.experience, newExperienceEntry],
+    }));
+    setExperienceEntry({
+      expTitle: "",
+      expOrgName: "",
+      expDuration: "",
+      expAbout: "",
     });
     console.log(user);
   };
@@ -158,6 +192,41 @@ function ProfileForm() {
         />
         <button type="button" onClick={addEducationEntry}>
           Add Education
+        </button>
+        <input
+          type="text"
+          className={styles.inp}
+          placeholder="Title (Position)"
+          name="expTitle"
+          onChange={handleExperienceInput}
+          value={experienceEntry.title}
+        />
+        <input
+          type="text"
+          className={styles.inp}
+          placeholder="Organization Name"
+          name="expOrgName"
+          onChange={handleExperienceInput}
+          value={experienceEntry.orgName}
+        />
+        <input
+          type="text"
+          className={styles.inp}
+          placeholder="Duration"
+          name="expDuration"
+          onChange={handleExperienceInput}
+          value={experienceEntry.duration}
+        />
+        <input
+          type="text"
+          className={styles.inp}
+          placeholder="About"
+          name="expAbout"
+          onChange={handleExperienceInput}
+          value={experienceEntry.about}
+        />
+        <button type="button" onClick={addExperienceEntry}>
+          Add Experience
         </button>
         <input
           type="text"

@@ -42,7 +42,7 @@ function Feed() {
 
     const postData = {
       name: user.name,
-      description: user.email,
+      description: user.headline,
       message: input,
       avatar: user.image,
     };

@@ -32,7 +32,7 @@ function Sidebar() {
           className={styles.sidebar__avatar}
         />
         <h2>{user.name}</h2>
-        <h4>{user.headline}</h4>
+        <h4>{user.headline.slice(0, 25) + "..."}</h4>
       </div>
 
       <div className={styles.sidebar__stats}>

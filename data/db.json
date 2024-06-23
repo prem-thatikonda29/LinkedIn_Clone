@@ -1,60 +1,67 @@
 {
   "posts": [
     {
-      "id": "f71c",
-      "name": "Ryan Tedder",
-      "description": "ryan@gmail.com",
-      "message": "hehe",
-      "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
+      "id": "8a24",
+      "name": "Ayush Aryan",
+      "description": "FUTURE TECH LEADER",
+      "message": "haha",
+      "avatar": "https://media.licdn.com/dms/image/D4D03AQENhYvmPJlYqw/profile-displayphoto-shrink_800_800/0/1704993908788?e=1724889600&v=beta&t=mGMvvI8iUgqKQqLC9X7vFk0QZP8JbWkzJsDSRAGpWAY"
     },
     {
-      "id": "2fce",
+      "id": "f0e0",
+      "name": "Sahil Sable",
+      "description": "BTech CSE at ITM Skills University",
+      "message": "Hi, myself sahil sable",
+      "avatar": "https://media.licdn.com/dms/image/D4D03AQEVDKv-9qa-0A/profile-displayphoto-shrink_400_400/0/1705003005242?e=1724889600&v=beta&t=RNAE_BXxL7mkMQwtK7ItoclRFiPeUHSlwQsGYmOAUA4"
+    },
+    {
+      "id": "4f6f",
       "name": "Pheonix Thatikonda",
-      "description": "thatikondprem072@gmail.com",
-      "message": "firee",
+      "description": "Student at ITM",
+      "message": "bit too hot innit?",
       "avatar": "https://i.pinimg.com/564x/33/0c/86/330c86ef35327fc8787b5303b324cbc8.jpg"
     },
     {
-      "id": "ae62",
-      "name": "Jane Doe",
-      "description": "jane@gmail.com",
-      "message": "Hiiii",
-      "avatar": "https://i.pinimg.com/564x/0f/5d/e3/0f5de3a216ef77de243a8bb7f053ac6b.jpg"
+      "id": "5d02",
+      "name": "Anusri Karmokar",
+      "description": "B.Tech CSE '27 | ITM Skills University | Swift Mumbai Core",
+      "message": "Baarish kyu nahi ho rahi :(",
+      "avatar": "https://media.licdn.com/dms/image/D4D03AQFYi0d1reHIsA/profile-displayphoto-shrink_400_400/0/1711394962324?e=1724889600&v=beta&t=Fk8vDtNBU1172iBG9GskdadSepo0YeKJZrab4W0W6o4"
     },
     {
-      "id": "68d1",
-      "name": "Ryan Tedder",
-      "description": "ryan@gmail.com",
-      "message": "Hello again",
-      "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
+      "id": "4a26",
+      "name": "Jeevan Naidu",
+      "description": "First-Year Tech Wiz | Passionate about Coding & Ancient Bharat Heritage | Bridging Past & Future in Tech Innovation",
+      "message": "Mahoday aap bade mandbuddh ho",
+      "avatar": "https://media.licdn.com/dms/image/D4D03AQHhW15Kyw8MJg/profile-displayphoto-shrink_400_400/0/1702142134342?e=1724889600&v=beta&t=Wj1U4bWITZUXam1XLU6qeiql0Vb7WJAH5dKrSUwMKXc"
     },
     {
-      "id": "494f",
-      "name": "Pheonix Thatikonda",
-      "description": "thatikondprem072@gmail.com",
-      "message": "hahaha",
-      "avatar": "https://i.pinimg.com/564x/33/0c/86/330c86ef35327fc8787b5303b324cbc8.jpg"
+      "id": "2ad6",
+      "name": "Tanay Sahajwalla",
+      "description": "Swift Mumbai Lead || GDSC Techfest Core",
+      "message": "Andheri is also sobo ya",
+      "avatar": "https://media.licdn.com/dms/image/D4D03AQHByRqaurVRsQ/profile-displayphoto-shrink_400_400/0/1693147347634?e=1724889600&v=beta&t=ddAnzPqMvoUSHgOPD5b0lpBXRZv8eqlyiosKMi5v9xk"
     },
     {
-      "id": "fafe",
+      "id": "a6a0",
       "name": "Aayush Chounkar",
-      "description": "aayush@gmail.com",
-      "message": "Lessgo India",
+      "description": "B.TECH CSE at ITM Skills University",
+      "message": "One love",
       "avatar": "https://media.licdn.com/dms/image/D4D03AQGm2N1Al5HMrw/profile-displayphoto-shrink_200_200/0/1702350096391?e=2147483647&v=beta&t=9UIJXqVya4DdZwqWAuy2-f1Si0QwfRC6Rh67d7esm6M"
     },
     {
-      "id": "57ce",
-      "name": "Anusri Karmokar",
-      "description": "anusri@gmail.com",
-      "message": "Jitu dada",
-      "avatar": "https://i.pinimg.com/564x/40/83/18/4083186369daa9a5e42fe707ec6ae3e2.jpg"
+      "id": "e0d2",
+      "name": "Manmeet Singh",
+      "description": "Backend Development l Python | Aspiring Software Developer | Enthusiastic learner | Student @ ITM Skills University",
+      "message": "css nahi ho raha :(",
+      "avatar": "https://media.licdn.com/dms/image/D4D03AQGWS_LH0D70tw/profile-displayphoto-shrink_400_400/0/1704949252003?e=1724889600&v=beta&t=JnYTnoDQj0Zg4lU5aE1f148G38oPArkNkKTMoJM5pkg"
     },
     {
-      "id": "0266",
-      "name": "Pheonix Thatikonda",
-      "description": "thatikondprem072@gmail.com",
-      "message": "refreshin!!",
-      "avatar": "https://i.pinimg.com/564x/33/0c/86/330c86ef35327fc8787b5303b324cbc8.jpg"
+      "id": "da2d",
+      "name": "Ayush Aryan",
+      "description": "FUTURE TECH LEADER",
+      "message": "ye kaise animate hua",
+      "avatar": "https://media.licdn.com/dms/image/D4D03AQENhYvmPJlYqw/profile-displayphoto-shrink_800_800/0/1704993908788?e=1724889600&v=beta&t=mGMvvI8iUgqKQqLC9X7vFk0QZP8JbWkzJsDSRAGpWAY"
     }
   ],
   "users": [
@@ -84,6 +91,14 @@
           "duration": "August 2021 - April 2023"
         }
       ],
+      "experience": [
+        {
+          "expTitle": "Intern",
+          "expOrgName": "Overtures Infotech, Byculla",
+          "expDuration": "June 2023 - July 2023",
+          "about": "Web development"
+        }
+      ],
       "city": "Mumbai",
       "country": "India",
       "state": "Maharashtra",
@@ -101,13 +116,21 @@
       "education": [
         {
           "degree": "B.Tech ",
-          "orgName": "ITM Skills University, Kharghar",
+          "orgName": "ITM Skills University",
           "duration": "4 years"
         },
         {
           "degree": "HSC",
           "orgName": "St. Xavier's College, Mumbai",
           "duration": "2 years"
+        }
+      ],
+      "experience": [
+        {
+          "expTitle": "Intern",
+          "expOrgName": "Overtures Infotech, Byculla",
+          "expDuration": "June '23 - July '23",
+          "expAbout": "Web Development"
         }
       ],
       "city": "Mumbai",
@@ -122,8 +145,8 @@
       "password": "aayush123",
       "image": "https://media.licdn.com/dms/image/D4D03AQGm2N1Al5HMrw/profile-displayphoto-shrink_200_200/0/1702350096391?e=2147483647&v=beta&t=9UIJXqVya4DdZwqWAuy2-f1Si0QwfRC6Rh67d7esm6M",
       "bannerImage": "https://media.licdn.com/dms/image/D4D22AQGH--xTPchUOg/feedshare-shrink_800/0/1708925010698?e=2147483647&v=beta&t=1mP2jGzPZNMKZznTAkRGBpqEw3eYIsfjvB4ZIoehpvM",
-      "headline": "Passionate Cricketer",
-      "about": "Struggling to study",
+      "headline": "B.TECH CSE at ITM Skills University",
+      "about": "With a passion for computer science engineering and currently pursuing a B.Tech degree, I am dedicated to honing my skills in software development. Fueled by a problem-solving mindset, I am actively delving into database management and SQL. Beyond academia, I am a proactive learner with a keen interest in cricket. As a B.Tech student, I am not only committed to academic excellence but also possess strong leadership skills, leveraging my proactive approach to tackle challenges in both technical and team-oriented environments.",
       "education": [
         {
           "degree": "B.Tech ",
@@ -140,13 +163,165 @@
       "name": "Anusri Karmokar",
       "email": "anusri@gmail.com",
       "password": "pass1234",
-      "image": "https://i.pinimg.com/564x/40/83/18/4083186369daa9a5e42fe707ec6ae3e2.jpg",
-      "bannerImage": "https://i.pinimg.com/564x/31/3a/f1/313af115f03cbb3841d1af1920a37826.jpg",
-      "headline": "I love turtles",
-      "about": "B. Tech Student and ambitious entrepreneur",
+      "image": "https://media.licdn.com/dms/image/D4D03AQFYi0d1reHIsA/profile-displayphoto-shrink_400_400/0/1711394962324?e=1724889600&v=beta&t=Fk8vDtNBU1172iBG9GskdadSepo0YeKJZrab4W0W6o4",
+      "bannerImage": "https://media.licdn.com/dms/image/D4D16AQGlKSS0CN6-cA/profile-displaybackgroundimage-shrink_350_1400/0/1704954550913?e=1724889600&v=beta&t=90b1tmd8GemJFtktIWEgCx4HrQ9Zf1vtnwf89KOHZmM",
+      "headline": "B.Tech CSE '27 | ITM Skills University | Swift Mumbai Core",
+      "about": "Enthusiastic and passionate computer science enthusiast with a solid educational foundation from Kendriya Vidyalaya ONGC Panvel and currently pursuing B.Tech at ITM Skills University. A dedicated and hardworking team player, adept at collaborative problem-solving. Eager to contribute my skills and knowledge to innovative projects in the field of Computer Science. Open to opportunities that allow me to continuously learn and grow in a dynamic and challenging environment.",
       "city": "Navi Mumbai",
       "state": "Maharahtra",
       "country": "India",
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University",
+          "duration": "4 years"
+        }
+      ]
+    },
+    {
+      "id": "8393",
+      "name": "Ayush Aryan",
+      "email": "ayush@gmail.com",
+      "password": "pass1234",
+      "image": "https://media.licdn.com/dms/image/D4D03AQENhYvmPJlYqw/profile-displayphoto-shrink_800_800/0/1704993908788?e=1724889600&v=beta&t=mGMvvI8iUgqKQqLC9X7vFk0QZP8JbWkzJsDSRAGpWAY",
+      "bannerImage": "https://media.licdn.com/dms/image/D4D16AQErVBWfAUq3Yw/profile-displaybackgroundimage-shrink_350_1400/0/1705001062077?e=1724889600&v=beta&t=mmereCzuCrS8806nLoxmSB9AozdiyBdYxfAEM-LAdVA",
+      "headline": "FUTURE TECH LEADER",
+      "about": "1st year BTech CSE Student at ITM Skills University Aiming to be an entrepreneur Beginner level C++ and Python Developer Enthusiastic about software development, machine learning, and cybersecurity. Dedicated to continuous learning and contributing to open-source projects. Eager to collaborate and innovate in the ever-evolving tech landscape. Let's code the future together! 🚀 #TechEnthusiast",
+      "city": "Navi Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University",
+          "duration": "4 years"
+        },
+        {
+          "degree": "School + College",
+          "orgName": "Kendriya Vidyalay",
+          "duration": "12 years"
+        }
+      ],
+      "experience": [
+        {
+          "expTitle": "Intern",
+          "expOrgName": "LetsUpgrade, Vashi",
+          "expDuration": "Dec '23 - Jan '24",
+          "expAbout": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "fca6",
+      "name": "Sahil Sable",
+      "email": "sahil@gmail.com",
+      "password": "pass1234",
+      "image": "https://media.licdn.com/dms/image/D4D03AQEVDKv-9qa-0A/profile-displayphoto-shrink_400_400/0/1705003005242?e=1724889600&v=beta&t=RNAE_BXxL7mkMQwtK7ItoclRFiPeUHSlwQsGYmOAUA4",
+      "bannerImage": "https://media.licdn.com/dms/image/D4D16AQE8zqO8Q2ksbA/profile-displaybackgroundimage-shrink_350_1400/0/1705383022914?e=1724889600&v=beta&t=RYlf2j2aPu9i3H2me1KVg3-eVwQGAjEQXnzRipwiy1E",
+      "headline": "BTech CSE at ITM Skills University",
+      "about": "As a B.Tech student, my skillset combines Presentation Skills, Communication, Engineering, Public Speaking, and Leadership. Proficient in presenting technical concepts clearly and engagingly, I excel in classroom discussions and collaborative projects. My communication skills extend to fostering open dialogues and effective teamwork, enhancing my academic and professional interactions.  Engineering forms the core of my studies, where I am passionate about applying theoretical knowledge to real-world challenges and staying updated with industry advancements. Public Speaking is a strength, allowing me to confidently address diverse audiences on technical topics, contributing to my academic success and leadership potential.  Furthermore, my Leadership skills shine through as I guide teams, motivate peers, and take initiative in various roles. These skills, collectively, prepare me not only for academic excellence but also for a future career in engineering where effective communication, technical expertise, and leadership abilities are essential for success.",
+      "city": "Thane",
+      "state": "Maharashtra",
+      "country": "India",
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University",
+          "duration": "4 years"
+        },
+        {
+          "degree": "Junior College",
+          "orgName": "RS Bidkar Arts Commerce Science College, Hinanghat",
+          "duration": "2 years"
+        }
+      ],
+      "experience": [
+        {
+          "expTitle": "Intern",
+          "expOrgName": "LetsUpgrade, Vashi",
+          "expDuration": "Dec '23 - Jan '24",
+          "expAbout": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "af48",
+      "name": "Jeevan Naidu",
+      "email": "jeevan@gmail.com",
+      "password": "pass1234",
+      "image": "https://media.licdn.com/dms/image/D4D03AQHhW15Kyw8MJg/profile-displayphoto-shrink_400_400/0/1702142134342?e=1724889600&v=beta&t=Wj1U4bWITZUXam1XLU6qeiql0Vb7WJAH5dKrSUwMKXc",
+      "bannerImage": "https://media.licdn.com/dms/image/D4D16AQGEZrUtQmGJFw/profile-displaybackgroundimage-shrink_350_1400/0/1703760661859?e=1724889600&v=beta&t=t6N-4nMwb-x4yrdvHjBkC5udB1DKoaIEj5pa6TGWzho",
+      "headline": "First-Year Tech Wiz | Passionate about Coding & Ancient Bharat Heritage | Bridging Past & Future in Tech Innovation",
+      "about": "👋 Passionate Tech Enthusiast | Coding Aficionado | Devoted to Preserving Bharat's Legacy 🚀  Currently a first-year tech student at ITM Skills University, I am immersed in building projects that celebrate Bharat's heritage while leveraging cutting-edge technology. Every endeavor is driven by my unwavering love for my motherland and a vision to contribute meaningfully to its advancement.  With a knack for coding and an insatiable curiosity for ancient Bharat's science, technology, literature, art, and music, I strive to integrate tradition with innovation to create impactful solutions for the modern world.  Looking ahead, I am eager to channel my passion with coding into a career that marries innovation with purpose.",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University",
+          "duration": "4 years"
+        },
+        {
+          "degree": "Junior College",
+          "orgName": "KJ Somaiya College of Science and Commerce",
+          "duration": "2 years"
+        }
+      ],
+      "experience": [
+        {
+          "expTitle": "Intern",
+          "expOrgName": "LetsUpgrade, Vashi",
+          "expDuration": "Dec '23 - Jan '24",
+          "expAbout": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "1d2c",
+      "name": "Tanay Sahajwalla",
+      "email": "tanay@gmail.com",
+      "password": "pass1234",
+      "image": "https://media.licdn.com/dms/image/D4D03AQHByRqaurVRsQ/profile-displayphoto-shrink_400_400/0/1693147347634?e=1724889600&v=beta&t=ddAnzPqMvoUSHgOPD5b0lpBXRZv8eqlyiosKMi5v9xk",
+      "bannerImage": "https://media.licdn.com/dms/image/D4D16AQEdT0A54-Ea-A/profile-displaybackgroundimage-shrink_350_1400/0/1695283541859?e=1724889600&v=beta&t=nwQKRFuQ8SmcSze3VuEcYpHvczmimNCFf65mhTMr42s",
+      "headline": "Swift Mumbai Lead || GDSC Techfest Core",
+      "about": "I am an enthusiast of Computer Science who has explored and developed projects using various programming languages such as C++, Python, C, JavaScript, HTML, CSS, and React Native. I have also created technological solutions for companies and built projects using platforms such as Appsheet, Framer, Glide, Wix, and Webflow. Additionally, I have completed several courses and earned certifications in Data Structures from UIUC, Digital Marketing from Google, Advanced Excel, Python 101 from IBM, and Data Science Foundations by Great Learning.",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University",
+          "duration": "4 years"
+        },
+        {
+          "degree": "Junior College",
+          "orgName": "Jai Hind College, Mumbai",
+          "duration": "2021 - 2023"
+        }
+      ],
+      "experience": [
+        {
+          "expTitle": "GDSC Techfest Core Team",
+          "expOrgName": "GDSC",
+          "expDuration": "March '24 - Present",
+          "expAbout": "As a member of GDSC Mumbai, I helped organize events for developers, which got recognized by Google. As a result, I visited the Google office."
+        }
+      ]
+    },
+    {
+      "id": "2d2a",
+      "name": "Manmeet Singh",
+      "email": "manmeet@gmail.com",
+      "password": "pass1234",
+      "image": "https://media.licdn.com/dms/image/D4D03AQGWS_LH0D70tw/profile-displayphoto-shrink_400_400/0/1704949252003?e=1724889600&v=beta&t=JnYTnoDQj0Zg4lU5aE1f148G38oPArkNkKTMoJM5pkg",
+      "city": "Navi Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "bannerImage": "https://media.licdn.com/dms/image/D4D16AQGAWn0GOehxXA/profile-displaybackgroundimage-shrink_350_1400/0/1706803645332?e=1724889600&v=beta&t=MxpobeVWxxO2mgunIA8hWfdE3OHvn-Orpt5ZOFt0Vv8",
+      "headline": "Backend Development l Python | Aspiring Software Developer | Enthusiastic learner | Student @ ITM Skills University",
+      "about": "Student at ITM Skills University, Kharghar, Navi Mumbai pursuing computer science engineering and an eager learner always excited to learn anything from zero to advance. Communication and Public Speaking being some of my softskills is which i love to do and feel very confident in it. A good team player as well as a leader helps me bring quality, creativity and guidance to the teams in various roles. A sports person since high school and dancing and singing really amuses me in my me time :)Student at ITM Skills University, Kharghar, Navi Mumbai pursuing computer science engineering and an eager learner always excited to learn anything from zero to advance. Communication and Public Speaking being some of my softskills is which i love to do and feel very confident in it. A good team player as well as a leader helps me bring quality, creativity and guidance to the teams in various roles. A sports person since high school and dancing and singing really amuses me in my me time :)",
       "education": [
         {
           "degree": "B.Tech ",
