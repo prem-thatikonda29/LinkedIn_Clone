@@ -126,9 +126,9 @@
       "about": "Struggling to study",
       "education": [
         {
-          "degree": "HSC",
-          "orgName": "St. Xavier's College, Mumbai",
-          "duration": "2 years"
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University",
+          "duration": "4 years"
         }
       ],
       "city": "Mumbai",
@@ -147,7 +147,13 @@
       "city": "Navi Mumbai",
       "state": "Maharahtra",
       "country": "India",
-      "education": []
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University",
+          "duration": "4 years"
+        }
+      ]
     }
   ]
 }
