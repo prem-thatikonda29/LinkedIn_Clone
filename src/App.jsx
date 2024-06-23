@@ -4,9 +4,12 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Feed from "./Components/Feed/Feed";
-import Login from "./pages/Login";
+import Login from "./pages/Login/Login";
 import Widgets from "./Components/Widgets/Widgets";
+import ProfilePage from "./pages/Profile/Profile";
+import ProfileForm from "./pages/Profile/ProfileForm";
 import { selectUser, login } from "./features/userSlice";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const user = useSelector(selectUser);
@@ -22,18 +25,39 @@ function App() {
   }, [dispatch]);
 
   return (
-    <section>
-      <Header />
-      {!user ? (
-        <Login />
-      ) : (
-        <div className="app__body">
-          <Sidebar />
-          <Feed />
-          <Widgets />
-        </div>
-      )}
-    </section>
+    <BrowserRouter>
+      <section>
+        <Header />
+        {!user ? (
+          <Login />
+        ) : (
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="app__body">
+                  <Sidebar />
+                  <Feed />
+                  <Widgets />
+                </div>
+              }
+            />
+            <Route
+              path="/home"
+              element={
+                <div className="app__body">
+                  <Sidebar />
+                  <Feed />
+                  <Widgets />
+                </div>
+              }
+            />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path={`/update/:id`} element={<ProfileForm />} />
+          </Routes>
+        )}
+      </section>
+    </BrowserRouter>
   );
 }
 

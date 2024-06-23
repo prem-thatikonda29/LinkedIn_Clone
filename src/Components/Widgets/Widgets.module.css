@@ -25,11 +25,11 @@
   align-items:center;
   gap: 15px;
   padding-left: 8px;
+  margin-top: 10px;
 }
 
 .widget__article__left {
   color: #0a66c2;
-  margin-top: -18px;
 }
 
 .widgets__article:hover {
@@ -39,8 +39,5 @@
 
 .widget__article__right{
     flex: 1 ;
-}
-
-.widget__article__right > h4 {
-  margin-bottom: -10px;
+    margin-bottom: 12px;
 }

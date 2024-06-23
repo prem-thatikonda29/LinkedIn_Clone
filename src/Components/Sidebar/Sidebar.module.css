@@ -3,12 +3,13 @@
   position: sticky;
   flex: 0.2;
   border-radius: 10px;
-  /* text-align: center; */
+  text-align: center;
   height: fit-content;
 }
 
 .sidebar__avatar { 
-  margin-left: 20px;  
+  margin-left: 35%;
+  margin-top: -20px;
   width: 65px; 
   height: 65px; 
   border-radius: 50%;

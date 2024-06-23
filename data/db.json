@@ -1,49 +1,49 @@
 {
   "posts": [
     {
-      "id": "d0e2",
-      "name": "Ryan Thatikonda",
+      "id": "f71c",
+      "name": "Ryan Tedder",
       "description": "ryan@gmail.com",
-      "message": "Test 1",
+      "message": "hehe",
       "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
     },
     {
-      "id": "e3a3",
-      "name": "Ryan Thatikonda",
-      "description": "ryan@gmail.com",
-      "message": "Test 2",
-      "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
-    },
-    {
-      "id": "48d5",
-      "name": "Ryan Thatikonda",
-      "description": "ryan@gmail.com",
-      "message": "Test 3",
-      "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
-    },
-    {
-      "id": "6b74",
-      "name": "Ryan Thatikonda",
-      "description": "ryan@gmail.com",
-      "message": "test 4",
-      "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
-    },
-    {
-      "id": "ef34",
-      "name": "Prem Thatikonda",
+      "id": "2fce",
+      "name": "Pheonix Thatikonda",
       "description": "thatikondprem072@gmail.com",
-      "message": "I am prem",
-      "avatar": "https://media.licdn.com/dms/image/D4E03AQHrZvNlxdsMEQ/profile-displayphoto-shrink_200_200/0/1710805247991?e=2147483647&v=beta&t=RYfRrp4v5olsXgqnpNRbpXnp4NfbFZlwkMgghDwz6nw"
+      "message": "firee",
+      "avatar": "https://i.pinimg.com/564x/33/0c/86/330c86ef35327fc8787b5303b324cbc8.jpg"
+    },
+    {
+      "id": "ae62",
+      "name": "Jane Doe",
+      "description": "jane@gmail.com",
+      "message": "Hiiii",
+      "avatar": "https://i.pinimg.com/564x/0f/5d/e3/0f5de3a216ef77de243a8bb7f053ac6b.jpg"
+    },
+    {
+      "id": "68d1",
+      "name": "Ryan Tedder",
+      "description": "ryan@gmail.com",
+      "message": "Hello again",
+      "avatar": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
+    },
+    {
+      "id": "494f",
+      "name": "Pheonix Thatikonda",
+      "description": "thatikondprem072@gmail.com",
+      "message": "hahaha",
+      "avatar": "https://i.pinimg.com/564x/33/0c/86/330c86ef35327fc8787b5303b324cbc8.jpg"
+    },
+    {
+      "id": "fafe",
+      "name": "Aayush Chounkar",
+      "description": "aayush@gmail.com",
+      "message": "Lessgo India",
+      "avatar": "https://media.licdn.com/dms/image/D4D03AQGm2N1Al5HMrw/profile-displayphoto-shrink_200_200/0/1702350096391?e=2147483647&v=beta&t=9UIJXqVya4DdZwqWAuy2-f1Si0QwfRC6Rh67d7esm6M"
     }
   ],
   "users": [
-    {
-      "id": 1,
-      "name": "Prem Thatikonda",
-      "email": "prem@gmail.com",
-      "password": "password123",
-      "image": "https://i.pinimg.com/564x/54/83/c0/5483c0b7f5ed4dd3495c8a19f4085a37.jpg"
-    },
     {
       "id": 2,
       "name": "Jane Doe",
@@ -55,15 +55,153 @@
       "id": "f76d",
       "name": "Ryan Thatikonda",
       "email": "ryan@gmail.com",
-      "password": "ryan1234",
-      "image": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg"
+      "password": "password123",
+      "image": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg",
+      "headline": "Student at ITM",
+      "education": [
+        {
+          "degree": "Bachelor of Technology, Information Technology",
+          "orgName": "ITM Skills University, Kharghar",
+          "duration": "Aug 2023 - Aug 2027"
+        },
+        {
+          "degree": "Higher Secondary Education",
+          "orgName": "St. Xavier's College, Mumbai",
+          "duration": "August 2021 - April 2023"
+        }
+      ],
+      "city": "Mumbai",
+      "country": "India",
+      "state": "Maharashtra",
+      "bannerImage": "https://i.pinimg.com/736x/81/8f/03/818f032d37a2fe103df44ab365e0b21f.jpg",
+      "about": "Hala madrid"
     },
     {
       "id": "8c6b",
-      "name": "Prem Thatikonda",
+      "name": "Pheonix Thatikonda",
       "email": "thatikondprem072@gmail.com",
       "password": "premi2903",
-      "image": "https://media.licdn.com/dms/image/D4E03AQHrZvNlxdsMEQ/profile-displayphoto-shrink_200_200/0/1710805247991?e=2147483647&v=beta&t=RYfRrp4v5olsXgqnpNRbpXnp4NfbFZlwkMgghDwz6nw"
+      "image": "https://i.pinimg.com/564x/33/0c/86/330c86ef35327fc8787b5303b324cbc8.jpg",
+      "headline": "Student at ITM",
+      "about": "I love fire",
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University, Kharghar",
+          "duration": "4 years"
+        },
+        {
+          "degree": "HSC",
+          "orgName": "St. Xavier's College, Mumbai",
+          "duration": "2 years"
+        }
+      ],
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "bannerImage": "https://i.pinimg.com/564x/8d/8d/fc/8d8dfc4d9b8ae9fb5e885dba3f3ecc94.jpg"
+    },
+    {
+      "id": "7fc2",
+      "name": "Aayush Chounkar",
+      "email": "aayush@gmail.com",
+      "password": "aayush123",
+      "image": "https://media.licdn.com/dms/image/D4D03AQGm2N1Al5HMrw/profile-displayphoto-shrink_200_200/0/1702350096391?e=2147483647&v=beta&t=9UIJXqVya4DdZwqWAuy2-f1Si0QwfRC6Rh67d7esm6M",
+      "bannerImage": "https://media.licdn.com/dms/image/D4D22AQGH--xTPchUOg/feedshare-shrink_800/0/1708925010698?e=2147483647&v=beta&t=1mP2jGzPZNMKZznTAkRGBpqEw3eYIsfjvB4ZIoehpvM",
+      "headline": "Passionate Cricketer",
+      "about": "Struggling to study",
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University, Kharghar",
+          "duration": "4 years"
+        },
+        {
+          "degree": "HSC",
+          "orgName": "St. Xavier's College, Mumbai",
+          "duration": "2 years"
+        }
+      ],
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India"
+    }
+  ],
+  "userData": [
+    {
+      "id": "f76d",
+      "name": "Ryan Thatikonda",
+      "email": "ryan@gmail.com",
+      "password": "password123",
+      "image": "https://i.pinimg.com/564x/40/83/25/408325bb57e1a479b656f75aba29a96f.jpg",
+      "headline": "Student at ITM",
+      "education": [
+        {
+          "degree": "Bachelor of Technology, Information Technology",
+          "orgName": "ITM Skills University, Kharghar",
+          "duration": "Aug 2023 - Aug 2027"
+        },
+        {
+          "degree": "Higher Secondary Education",
+          "orgName": "St. Xavier's College, Mumbai",
+          "duration": "August 2021 - April 2023"
+        }
+      ],
+      "city": "Mumbai",
+      "country": "India",
+      "state": "Maharashtra",
+      "bannerImage": "https://i.pinimg.com/736x/81/8f/03/818f032d37a2fe103df44ab365e0b21f.jpg",
+      "about": "Hala madrid"
+    },
+    {
+      "id": "8c6b",
+      "name": "Pheonix Thatikonda",
+      "email": "thatikondprem072@gmail.com",
+      "password": "premi2903",
+      "image": "https://i.pinimg.com/564x/33/0c/86/330c86ef35327fc8787b5303b324cbc8.jpg",
+      "headline": "Student at ITM",
+      "about": "I love fire",
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University, Kharghar",
+          "duration": "4 years"
+        },
+        {
+          "degree": "HSC",
+          "orgName": "St. Xavier's College, Mumbai",
+          "duration": "2 years"
+        }
+      ],
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+      "bannerImage": "https://i.pinimg.com/564x/8d/8d/fc/8d8dfc4d9b8ae9fb5e885dba3f3ecc94.jpg"
+    },
+    {
+      "id": "7fc2",
+      "name": "Aayush Chounkar",
+      "email": "aayush@gmail.com",
+      "password": "aayush123",
+      "image": "https://media.licdn.com/dms/image/D4D03AQGm2N1Al5HMrw/profile-displayphoto-shrink_200_200/0/1702350096391?e=2147483647&v=beta&t=9UIJXqVya4DdZwqWAuy2-f1Si0QwfRC6Rh67d7esm6M",
+      "bannerImage": "https://media.licdn.com/dms/image/D4D22AQGH--xTPchUOg/feedshare-shrink_800/0/1708925010698?e=2147483647&v=beta&t=1mP2jGzPZNMKZznTAkRGBpqEw3eYIsfjvB4ZIoehpvM",
+      "headline": "Passionate Cricketer",
+      "about": "Struggling to study",
+      "education": [
+        {
+          "degree": "B.Tech ",
+          "orgName": "ITM Skills University, Kharghar",
+          "duration": "4 years"
+        },
+        {
+          "degree": "HSC",
+          "orgName": "St. Xavier's College, Mumbai",
+          "duration": "2 years"
+        }
+      ],
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India"
     }
   ]
 }

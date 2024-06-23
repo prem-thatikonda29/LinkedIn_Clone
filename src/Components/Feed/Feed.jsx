@@ -88,7 +88,12 @@ function Feed() {
         </div>
 
         <div className={styles.feed__postOptions}>
-          <InputOption Icon={faImage} title="Media" color="#0A66C2" />
+          <InputOption
+            Icon={faImage}
+            title="Media"
+            color="#0A66C2"
+            onClick={() => {}}
+          />
           <InputOption Icon={faCalendar} title="Event" color="#c37d16" />
           <InputOption
             Icon={faNewspaper}

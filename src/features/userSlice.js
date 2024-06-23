@@ -15,10 +15,13 @@ export const userSlice = createSlice({
     register: (state, action) => {
       state.user = action.payload;
     },
+    updateUser: (state, action) => {
+      state.user = action.payload;
+    },
   },
 });
 
-export const { login, logout, register } = userSlice.actions;
+export const { login, logout, register, updateUser } = userSlice.actions;
 
 export const selectUser = (state) => state.user.user;
 

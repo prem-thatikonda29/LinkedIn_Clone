@@ -10,4 +10,6 @@
   /* justify-content: baseline; */
   background-color: #f3f2ef;
   padding: 0 180px;
+  height: fit-content;
+  min-height: 91vh;
 }
