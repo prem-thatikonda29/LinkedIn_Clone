@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux"; // Import useDispatch
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./HeaderOptions.module.css";
@@ -8,12 +8,14 @@ import { selectUser, logout } from "../../features/userSlice"; // Import logout 
 function HeaderOptions({ avatar, Icon, title }) {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     // Clear user from localStorage
     localStorage.removeItem("user");
     // Dispatch the logout action
     dispatch(logout());
+    navigate("/login");
   };
 
   return (

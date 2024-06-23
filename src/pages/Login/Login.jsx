@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../../features/userSlice";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
@@ -9,6 +10,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -23,6 +25,7 @@ function Login() {
         if (user) {
           dispatch(login(user));
           localStorage.setItem("user", JSON.stringify(user));
+          navigate("/home");
         } else {
           alert("Invalid email or password");
         }
@@ -53,22 +56,12 @@ function Login() {
       .then((data) => {
         dispatch(login(data));
         localStorage.setItem("user", JSON.stringify(data));
+        navigate("/additional-info"); // Navigate to additional info page after successful registration
       })
       .catch((error) => {
         console.error("Error registering user:", error);
         alert("Error registering user");
       });
-
-    fetch("http://localhost:3500/userData", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newUser),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log("Added into db successfuly : ", newUser))
-      .catch((e) => console.log(e));
   };
 
   return (
@@ -98,7 +91,7 @@ function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={handleLogin}>Sign in</button>
+        <button onClick={handleLogin} type="submit">Sign in</button>
         <p>
           New user?
           <span className="login__register" onClick={handleRegister}>

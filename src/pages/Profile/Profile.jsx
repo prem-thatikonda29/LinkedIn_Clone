@@ -1,28 +1,78 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../features/userSlice";
+import { useSelector, useDispatch } from "react-redux"; // Import useDispatch
+import { selectUser, updateUser } from "../../features/userSlice";
 import "./Profile.css";
 
 function ProfilePage() {
+  const dispatch = useDispatch(); // Initialize useDispatch hook
   const user = useSelector(selectUser);
   const [info, setInfo] = useState({});
   const [education, setEducation] = useState([]);
-  // const education = user.education;
+
   useEffect(() => {
-    fetch(`http://localhost:3500/userData/${user.id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.length > 0) {
+    if (user && user.id) {
+      fetch(`http://localhost:3500/users/${user.id}`)
+        .then((response) => response.json())
+        .then((data) => {
           setInfo(data);
+          setEducation(data.education || []);
+        })
+        .catch((err) => {
+          console.error("Error fetching user data:", err);
+        });
+    }
+  }, [user]);
+
+  const handleDeleteEducation = (index) => {
+    // Create a copy of the education array
+    const updatedEducation = [...education];
+    // Remove the education entry at the specified index
+    updatedEducation.splice(index, 1);
+    // Update the local state
+    setEducation(updatedEducation);
+    // Update the user object
+    const updatedUser = {
+      ...info,
+      education: updatedEducation,
+    };
+    setInfo(updatedUser);
+    // Update the user data in the Redux store
+    updateUserInRedux(updatedUser);
+    // Update the user data in the database
+    updateUserInDatabase(updatedUser);
+  };
+
+  const updateUserInRedux = (updatedUser) => {
+    // Dispatch an action to update the user in Redux store
+    dispatch(updateUser(updatedUser)); // Use dispatch function here
+    // Update the user data in localStorage (if needed)
+    localStorage.setItem("user", JSON.stringify(updatedUser));
+  };
+
+  const updateUserInDatabase = (updatedUser) => {
+    // Update the user data in the database
+    const usersUrl = `http://localhost:3500/users/${user.id}`;
+    fetch(usersUrl, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedUser),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
         }
-        console.log(data);
-        setEducation(data.education);
+        return response.json();
       })
-      .catch((err) => {
-        console.log(err);
+      .then((userData) => {
+        console.log("User update successful:", userData);
+      })
+      .catch((error) => {
+        console.error("Error updating user:", error);
       });
-  }, []);
+  };
 
   return (
     <>
@@ -31,126 +81,36 @@ function ProfilePage() {
           <div className="hero">
             <div className="hero-banner">
               <img
-                src={user.bannerImage}
+                src={info.bannerImage}
                 alt="Banner"
                 className="hero-banner-image"
                 id="hero-banner-image"
               />
-
               <Link to={`/update/${user.id}`}>
                 <label className="editBanner" htmlFor="hero-banner-image">
-                  Pen
+                  Edit Banner
                 </label>
               </Link>
             </div>
             <div className="hero-avatar">
-              <img src={user.image} alt="Profile" id="profile-pic" />
+              <img src={info.image} alt="Profile" id="profile-pic" />
             </div>
           </div>
           <div className="intro">
-            <div className="intro-name">{user.name}</div>
+            <div className="intro-name">{info.name}</div>
             <div className="intro-desc">
-              <p>{user.headline}</p>
+              <p>{info.headline}</p>
             </div>
           </div>
 
           <section className="about" id="about">
             <h2>About</h2>
-            <p className="about-desc">{user.about}</p>
+            <p className="about-desc">{info.about}</p>
           </section>
 
           <section className="experience" id="experience">
             <h2>Experience</h2>
-
-            <div className="exp-item">
-              <div className="org-img">
-                <img
-                  src="https://images.yourstory.com/cs/images/companies/oiflRYdP400x400-1592909309243.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff"
-                  alt="WheelsEye"
-                />
-              </div>
-              <div className="exp-details">
-                <h4 className="role-name">Software Engineer</h4>
-                <div className="role-org-name">WheelsEye</div>
-                <div className="role-duration">Aug 2022 - Present</div>
-                <div className="role-desc">
-                  <ul>
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Similique assumenda iure, unde mollitia cum fugit?
-                    </li>
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Similique assumenda iure, unde mollitia cum fugit?
-                    </li>
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Similique assumenda iure, unde mollitia cum fugit?
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="exp-item">
-              <div className="org-img">
-                <img
-                  src="https://media.licdn.com/dms/image/C560BAQFXKkWPSzWtVg/company-logo_200_200/0/1634283000059/mazecare_logo?e=2147483647&v=beta&t=UxGLfnJ2HHPQJQMYdasVsAFIJYIhDjnPi1rVwmKFYX4"
-                  alt="Mazecare"
-                />
-              </div>
-              <div className="exp-details">
-                <h4 className="role-name">Software Engineer</h4>
-                <div className="role-org-name">Mazecare</div>
-                <div className="role-duration">Apr 2022 - Jul 2022</div>
-                <div className="role-desc">
-                  <ul>
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Similique assumenda iure, unde mollitia cum fugit?
-                    </li>
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Similique assumenda iure, unde mollitia cum fugit?
-                    </li>
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Similique assumenda iure, unde mollitia cum fugit?
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="exp-item">
-              <div className="org-img">
-                <img
-                  src="https://omrajsharma.github.io/assets/images/datametricks-logo.jpg"
-                  alt="DataMatricks"
-                />
-              </div>
-              <div className="exp-details">
-                <h4 className="role-name">Software Engineer</h4>
-                <div className="role-org-name">DataMatricks</div>
-                <div className="role-duration">Dec 2021 - Feb 2022</div>
-                <div className="role-desc">
-                  <ul>
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Similique assumenda iure, unde mollitia cum fugit?
-                    </li>
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Similique assumenda iure, unde mollitia cum fugit?
-                    </li>
-                    <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Similique assumenda iure, unde mollitia cum fugit?
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            {/* Experience items */}
           </section>
 
           <section className="education" id="education">
@@ -167,6 +127,13 @@ function ProfilePage() {
                   <h4 className="edu-name">{edu.degree}</h4>
                   <div className="edu-org-name">{edu.orgName}</div>
                   <div className="edu-duration">{edu.duration}</div>
+                  <button
+                    type="button"
+                    className="delete-btn"
+                    onClick={() => handleDeleteEducation(index)}
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             ))}

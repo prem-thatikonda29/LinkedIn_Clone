@@ -5,11 +5,12 @@ import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Feed from "./Components/Feed/Feed";
 import Login from "./pages/Login/Login";
+import AdditionalInfoForm from "./pages/AdditionalInfoForm/AdditionalInfoForm";
 import Widgets from "./Components/Widgets/Widgets";
 import ProfilePage from "./pages/Profile/Profile";
 import ProfileForm from "./pages/Profile/ProfileForm";
 import { selectUser, login } from "./features/userSlice";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const user = useSelector(selectUser);
@@ -26,38 +27,35 @@ function App() {
 
   return (
     <BrowserRouter>
-      <section>
+      <div>
         <Header />
-        {!user ? (
-          <Login />
-        ) : (
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="app__body">
-                  <Sidebar />
-                  <Feed />
-                  <Widgets />
-                </div>
-              }
-            />
-            <Route
-              path="/home"
-              element={
-                <div className="app__body">
-                  <Sidebar />
-                  <Feed />
-                  <Widgets />
-                </div>
-              }
-            />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path={`/update/:id`} element={<ProfileForm />} />
-          </Routes>
-        )}
-      </section>
+        <Routes>
+          {!user ? (
+            <>
+              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/additional-info" element={<AdditionalInfoForm />} />
+            </>
+          ) : (
+            <>
+              <Route path="/home" element={<Home />} />
+              <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/update/:id" element={<ProfileForm />} />
+            </>
+          )}
+        </Routes>
+      </div>
     </BrowserRouter>
+  );
+}
+
+function Home() {
+  return (
+    <div className="app__body">
+      <Sidebar />
+      <Feed />
+      <Widgets />
+    </div>
   );
 }
 

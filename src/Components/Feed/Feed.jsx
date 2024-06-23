@@ -30,7 +30,7 @@ function Feed() {
         let reversedPosts = [...data];
         setPosts(reversedPosts.reverse());
         console.log(data);
-        console.log("User : ", user);
+        // console.log("User : ", user);
       })
       .catch((e) => {
         console.log(e);

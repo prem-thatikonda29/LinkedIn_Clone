@@ -9,43 +9,28 @@ function ProfileForm() {
 
   const [user, setUser] = useState({
     id: "",
-    name: "", 
+    name: "",
     email: "",
     image: "",
     headline: "",
     education: [],
     city: "",
     country: "",
+    bannerImage: "",
+    about: "",
   });
 
   const [educationEntry, setEducationEntry] = useState({
-    degree: "", 
+    degree: "",
     orgName: "",
     duration: "",
   });
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    } else {
-      fetchUserData();
+    if (currentUser) {
+      setUser(currentUser);
     }
-  }, []);
-
-  const fetchUserData = () => {
-    fetch(`http://localhost:3500/userData/${user.id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.length > 0) {
-          setUser(data);
-          localStorage.setItem("user", JSON.stringify(data));
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  }, [currentUser]);
 
   const handleInput = (event) => {
     const { name, value } = event.target;
@@ -58,70 +43,48 @@ function ProfileForm() {
   };
 
   const addEducationEntry = () => {
+    const newEducationEntry = {
+      degree: educationEntry.degree,
+      orgName: educationEntry.orgName,
+      duration: educationEntry.duration,
+    };
+
     setUser((prevState) => ({
       ...prevState,
-      education: [...prevState.education, educationEntry],
+      education: [...prevState.education, newEducationEntry],
     }));
     setEducationEntry({
       degree: "",
       orgName: "",
       duration: "",
     });
-  };
-
-  const updateUserInDb = async (url, method) => {
-    return fetch(url, {
-      method: method,
-      body: JSON.stringify(user),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    console.log(user);
   };
 
   const handleUpdate = async (event) => {
     event.preventDefault();
 
-    const userUrl = `http://localhost:3500/userData/${user.id}`;
     const usersUrl = `http://localhost:3500/users/${user.id}`;
 
-    const checkAndUpdateUser = async (url) => {
-      try {
-        const response = await fetch(url);
-        if (response.status === 404) {
-          // User does not exist, perform POST request
-          return updateUserInDb(`http://localhost:3500/userData`, "POST");
-        } else if (response.ok) {
-          // User exists, perform PUT request
-          return updateUserInDb(url, "PUT");
-        } else {
-          throw new Error("Network response was not ok");
-        }
-      } catch (err) {
-        console.error("Error checking user:", err);
-      }
-    };
-
     try {
-      // Check and update user in userData
-      const userResponse = await checkAndUpdateUser(userUrl);
-      if (!userResponse.ok) {
+      const response = await fetch(usersUrl, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+
+      if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-      const userData = await userResponse.json();
+
+      const userData = await response.json();
       dispatch(updateUser(userData));
       localStorage.setItem("user", JSON.stringify(userData));
-      console.log("UserData update successful:", userData);
-
-      // Check and update user in users
-      const usersResponse = await checkAndUpdateUser(usersUrl);
-      if (!usersResponse.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const usersData = await usersResponse.json();
-      console.log("Users update successful:", usersData);
-    } catch (err) {
-      console.error("Error updating user:", err);
+      console.log("User update successful:", userData);
+    } catch (error) {
+      console.error("Error updating user:", error);
     }
   };
 
